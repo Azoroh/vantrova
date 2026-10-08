@@ -1,4 +1,4 @@
-# Vanlife
+# VANtrova
 
 A van rental app built while working through the advanced React course on Scrimba. This is my own TypeScript replication of the project, built with React, React Router, and Vite.
 
@@ -20,7 +20,7 @@ A van rental app built while working through the advanced React course on Scrimb
 
 ```bash
 git clone <your-repo-url>
-cd vanlife
+cd vantrova
 npm install
 ```
 

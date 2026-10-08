@@ -15,7 +15,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.text}>
-          Add adventure to your life by joining the #vanlife movement. Rent the
+          Add adventure to your life by joining the VANtrova movement. Rent the
           perfect van to make your perfect road trip.
         </p>
 
