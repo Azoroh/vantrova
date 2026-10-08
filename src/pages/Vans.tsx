@@ -47,6 +47,38 @@ const MOCK_VANS: Van[] = [
     imageUrl:
       "https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png",
   },
+  {
+    id: "1",
+    name: "Modest Explorer",
+    price: 60,
+    type: "simple",
+    imageUrl:
+      "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png",
+  },
+  {
+    id: "2",
+    name: "Beach Bum",
+    price: 80,
+    type: "rugged",
+    imageUrl:
+      "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png",
+  },
+  {
+    id: "3",
+    name: "Reliable Red",
+    price: 100,
+    type: "luxury",
+    imageUrl:
+      "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png",
+  },
+  {
+    id: "4",
+    name: "Dreamfinder",
+    price: 65,
+    type: "simple",
+    imageUrl:
+      "https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png",
+  },
 ];
 
 export default function Vans() {
