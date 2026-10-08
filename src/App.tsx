@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import styles from "./App.module.css";
+import Vans from "./pages/Vans";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/vans" element={<Vans />} />
           </Routes>
         </div>
 
