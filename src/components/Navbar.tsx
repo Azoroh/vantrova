@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <NavLink to="/" className={styles.logo}>
-        <Logo size={48} />
+        <Logo />
       </NavLink>
 
       <nav>

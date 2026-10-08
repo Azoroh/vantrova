@@ -1,19 +1,39 @@
 .header {
-  /* fill in from Figma: height, padding, background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 26px;
+  height: 111px;
+  background-color: #fff7ed;
 }
 
 .logo {
-  /* fill in from Figma: font size, weight, letter spacing */
+  display: block;
+  line-height: 0;
+}
+.logo svg {
+  width: 68px;
+  height: auto;
 }
 
 .links {
-  /* fill in from Figma: gap between links */
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
-  /* fill in from Figma: inactive color, size, weight */
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.92px;
+  color: #4d4d4d;
+  text-decoration: none;
 }
 
 .active {
-  /* fill in from Figma: active underline and color */
+  color: #161616;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
