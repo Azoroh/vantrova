@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 26px;
+  /*padding: 45px 26px;*/
+  padding: 0 26px;
   height: 111px;
   background-color: #fff7ed;
 }
