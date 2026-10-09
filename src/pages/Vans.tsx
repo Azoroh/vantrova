@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import styles from "./Vans.module.css";
 
@@ -82,7 +82,8 @@ export const MOCK_VANS: Van[] = [
 ];
 
 export default function Vans() {
-  const [vans, setVans] = useState<Van[]>(MOCK_VANS);
+  // const [vans, setVans] = useState<Van[]>(MOCK_VANS);
+  const vans: Van[] = MOCK_VANS;
 
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
