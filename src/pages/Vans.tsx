@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import styles from "./Vans.module.css";
 import { nanoid } from "nanoid";
 
@@ -84,8 +84,9 @@ const MOCK_VANS: Van[] = [
 
 export default function Vans() {
   const [vans, setVans] = useState<Van[]>(MOCK_VANS);
-  // Optional: Set up useSearchParams here later instead of local state
-  const [typeFilter, setTypeFilter] = useState<VanType | null>(null);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const typeFilter = searchParams.get("type");
 
   const displayedVans = typeFilter
     ? vans.filter((van) => van.type === typeFilter)
@@ -97,19 +98,19 @@ export default function Vans() {
 
       <div className={styles.filters}>
         <button
-          onClick={() => setTypeFilter("simple")}
+          onClick={() => setSearchParams({ type: "simple" })}
           className={`${styles.filterBtn} ${typeFilter === "simple" ? styles.selected : ""}`}
         >
           Simple
         </button>
         <button
-          onClick={() => setTypeFilter("luxury")}
+          onClick={() => setSearchParams({ type: "luxury" })}
           className={`${styles.filterBtn} ${typeFilter === "luxury" ? styles.selected : ""}`}
         >
           Luxury
         </button>
         <button
-          onClick={() => setTypeFilter("rugged")}
+          onClick={() => setSearchParams({ type: "rugged" })}
           className={`${styles.filterBtn} ${typeFilter === "rugged" ? styles.selected : ""}`}
         >
           Rugged
@@ -117,7 +118,7 @@ export default function Vans() {
 
         {typeFilter && (
           <button
-            onClick={() => setTypeFilter(null)}
+            onClick={() => setSearchParams({})}
             className={styles.clearFilters}
           >
             Clear
