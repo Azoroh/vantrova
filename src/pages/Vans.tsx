@@ -132,16 +132,18 @@ export default function Vans() {
               alt={`Photo of ${van.name}`}
               className={styles.vanImage}
             />
-            <div className={styles.vanInfo}>
-              <h2 className={styles.vanName}>{van.name}</h2>
+            <div className={styles.vanDetail}>
+              <div className={styles.vanInfo}>
+                <h2 className={styles.vanName}>{van.name}</h2>
+                <i className={`${styles.vanBadge} ${styles[van.type]}`}>
+                  {van.type}
+                </i>
+              </div>
               <div className={styles.priceContainer}>
                 <span className={styles.vanPrice}>${van.price}</span>
                 <span className={styles.vanDay}>/day</span>
               </div>
             </div>
-            <i className={`${styles.vanBadge} ${styles[van.type]}`}>
-              {van.type}
-            </i>
           </Link>
         ))}
       </div>
