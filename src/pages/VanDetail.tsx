@@ -11,7 +11,11 @@ interface VanItem extends Van {
 export default function VanDetail() {
   const { id } = useParams();
 
-  const van = MOCK_VANS.find((van) => van.id.toString() === id?.toString());
+  const van: Van | undefined = MOCK_VANS.find(
+    (van) => van.id.toString() === id?.toString(),
+  );
+
+  if (!van) return <h2>Van not found!</h2>;
 
   const MOCK_VAN_WITH_DESC: VanItem = {
     ...van,
@@ -20,8 +24,6 @@ export default function VanDetail() {
   };
 
   const { imageUrl, name, type, price, description } = MOCK_VAN_WITH_DESC;
-
-  if (!van) return <h2>Van not found!</h2>;
 
   return (
     <main className={styles.page}>

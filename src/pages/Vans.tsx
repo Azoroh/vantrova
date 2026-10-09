@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import styles from "./Vans.module.css";
-import { nanoid } from "nanoid";
 
 // TODO: Move to a shared types file later
 export type VanType = "simple" | "luxury" | "rugged";
@@ -17,7 +16,7 @@ export interface Van {
 // Mock data based on your Figma design
 export const MOCK_VANS: Van[] = [
   {
-    id: nanoid(),
+    id: "1",
     name: "Modest Explorer",
     price: 60,
     type: "simple",
@@ -25,7 +24,7 @@ export const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png",
   },
   {
-    id: nanoid(),
+    id: "2",
     name: "Beach Bum",
     price: 80,
     type: "rugged",
@@ -33,7 +32,7 @@ export const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png",
   },
   {
-    id: nanoid(),
+    id: "3",
     name: "Reliable Red",
     price: 100,
     type: "luxury",
@@ -41,7 +40,7 @@ export const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png",
   },
   {
-    id: nanoid(),
+    id: "4",
     name: "Dreamfinder",
     price: 65,
     type: "simple",
@@ -49,7 +48,7 @@ export const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png",
   },
   {
-    id: nanoid(),
+    id: "5",
     name: "Modest Explorer",
     price: 60,
     type: "simple",
@@ -57,7 +56,7 @@ export const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png",
   },
   {
-    id: nanoid(),
+    id: "6",
     name: "Beach Bum",
     price: 80,
     type: "rugged",
@@ -65,7 +64,7 @@ export const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png",
   },
   {
-    id: nanoid(),
+    id: "7",
     name: "Reliable Red",
     price: 100,
     type: "luxury",
@@ -73,7 +72,7 @@ export const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png",
   },
   {
-    id: nanoid(),
+    id: "8",
     name: "Dreamfinder",
     price: 65,
     type: "simple",
