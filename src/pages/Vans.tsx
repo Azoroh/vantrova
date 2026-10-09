@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Vans.module.css";
+import { nanoid } from "nanoid";
 
 // TODO: Move to a shared types file later
 export type VanType = "simple" | "luxury" | "rugged";
@@ -16,7 +17,7 @@ export interface Van {
 // Mock data based on your Figma design
 const MOCK_VANS: Van[] = [
   {
-    id: "1",
+    id: nanoid(),
     name: "Modest Explorer",
     price: 60,
     type: "simple",
@@ -24,7 +25,7 @@ const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png",
   },
   {
-    id: "2",
+    id: nanoid(),
     name: "Beach Bum",
     price: 80,
     type: "rugged",
@@ -32,7 +33,7 @@ const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png",
   },
   {
-    id: "3",
+    id: nanoid(),
     name: "Reliable Red",
     price: 100,
     type: "luxury",
@@ -40,7 +41,7 @@ const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png",
   },
   {
-    id: "4",
+    id: nanoid(),
     name: "Dreamfinder",
     price: 65,
     type: "simple",
@@ -48,7 +49,7 @@ const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png",
   },
   {
-    id: "1",
+    id: nanoid(),
     name: "Modest Explorer",
     price: 60,
     type: "simple",
@@ -56,7 +57,7 @@ const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png",
   },
   {
-    id: "2",
+    id: nanoid(),
     name: "Beach Bum",
     price: 80,
     type: "rugged",
@@ -64,7 +65,7 @@ const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png",
   },
   {
-    id: "3",
+    id: nanoid(),
     name: "Reliable Red",
     price: 100,
     type: "luxury",
@@ -72,7 +73,7 @@ const MOCK_VANS: Van[] = [
       "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png",
   },
   {
-    id: "4",
+    id: nanoid(),
     name: "Dreamfinder",
     price: 65,
     type: "simple",
