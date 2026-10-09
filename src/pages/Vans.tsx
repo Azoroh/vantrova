@@ -119,7 +119,7 @@ export default function Vans() {
             onClick={() => setTypeFilter(null)}
             className={styles.clearFilters}
           >
-            Clear filters
+            Clear
           </button>
         )}
       </div>
