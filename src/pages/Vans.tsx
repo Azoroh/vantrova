@@ -15,7 +15,7 @@ export interface Van {
 }
 
 // Mock data based on your Figma design
-const MOCK_VANS: Van[] = [
+export const MOCK_VANS: Van[] = [
   {
     id: nanoid(),
     name: "Modest Explorer",
