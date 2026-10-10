@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 74.75px;
+  height: clamp(3rem, 8dvh, 4.675rem);
+  flex-shrink: 0;
   text-align: center;
-  background-color: #252525;
-  color: #aaaaaa;
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-txt);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 23px;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
 }

@@ -1,9 +1,9 @@
 .page {
-  padding: clamp(12px, 2vh, 24px) 26px;
+  padding: clamp(0.75rem, 2dvh, var(--sp-3)) var(--page-gutter);
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #fff7ed;
+  background-color: var(--color-cream);
   min-height: 0;
 }
 
@@ -11,11 +11,11 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #161616;
+  color: var(--color-dark);
   text-decoration: underline;
-  font-size: 14px;
+  font-size: clamp(0.8125rem, 2vw, 0.875rem);
   font-weight: 400;
-  margin-bottom: clamp(12px, 2vh, 28px);
+  margin-bottom: clamp(0.75rem, 2dvh, 1.75rem);
   align-self: flex-start;
   flex-shrink: 0;
 }
@@ -29,34 +29,16 @@
 
 .image {
   width: 100%;
-  border-radius: 5px;
-  margin-bottom: clamp(12px, 2.5vh, 20px);
+  border-radius: var(--radius-md);
+  margin-bottom: clamp(0.75rem, 2.5dvh, 1.25rem);
   object-fit: cover;
-
   flex: 1 1 auto;
-  min-height: 25vh;
-  max-height: 45vh;
+  /* clamp shrinks from 30dvh minimum down to 180px on very small screens */
+  min-height: clamp(180px, 25dvh, 240px);
+  max-height: 45dvh;
 }
 
-.title {
-  font-size: 30px;
-  font-weight: 700;
-  color: #161616;
-  margin: 0 0 10px 0;
-}
-
-.price {
-  font-size: 16px;
-  font-weight: 400;
-  color: #161616;
-  margin: 0 0 10px 0;
-}
-
-.priceAmount {
-  font-size: 20px;
-  font-weight: 700;
-}
-
+/* Keep text/button elements from being crushed by the image's flex-grow */
 .badge,
 .title,
 .price,
@@ -65,60 +47,53 @@
   flex-shrink: 0;
 }
 
-.description {
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
-  color: #161616;
-  margin: 0 0 clamp(12px, 2.5vh, 24px) 0;
-}
-
-.rentButton {
-  background-color: #ff8c38;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 16px;
-  font-size: 16px;
-  font-weight: 700;
-  font-family: inherit;
-  cursor: pointer;
-  width: 100%;
-  transition:
-    transform 0.1s ease,
-    background-color 0.2s ease;
-}
-
-.rentButton:active {
-  transform: scale(0.98);
-}
-
-/* --- Type Badges --- */
 .badge {
   display: inline-block;
   padding: 4px 10px;
-  border-radius: 2px;
-  font-size: 12px;
+  border-radius: var(--radius-sm);
+  font-size: clamp(0.6875rem, 2vw, 0.75rem);
   font-weight: 500;
   font-style: normal;
-  color: #ffead0;
+  color: var(--color-badge-txt);
   align-self: flex-start;
   text-transform: capitalize;
-  margin-bottom: 16px;
+  margin-bottom: var(--sp-2);
 }
 
-.simple {
-  background: #e17654;
+.title {
+  font-size: clamp(1.5rem, 4dvh, 1.875rem);
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 var(--sp-1) 0;
 }
-.rugged {
-  background: #115e59;
+
+.price {
+  font-size: clamp(0.875rem, 2.5dvh, 1rem);
+  font-weight: 400;
+  color: var(--color-dark);
+  margin: 0 0 var(--sp-1) 0;
 }
-.luxury {
-  background: #161616;
+
+.priceAmount {
+  font-size: clamp(1rem, 3dvh, 1.25rem);
+  font-weight: 700;
+}
+
+.description {
+  font-size: clamp(0.8125rem, 2dvh, 0.875rem);
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin: 0 0 clamp(0.75rem, 2.5dvh, 1.5rem) 0;
+}
+
+/* Local override on top of global .btn-primary */
+.rentButton {
+  width: 100%;
 }
 
 .loading {
-  padding: 24px 26px;
+  padding: var(--sp-3) var(--page-gutter);
   font-family: inherit;
-  font-size: 24px;
+  font-size: clamp(1.25rem, 3dvh, 1.5rem);
 }

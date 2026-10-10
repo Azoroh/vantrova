@@ -33,7 +33,7 @@ export default function About() {
           Your van is ready.
         </h2>
 
-        <Link to="/vans" className={styles.button}>
+        <Link to="/vans" className={`btn-primary ${styles.button}`}>
           Explore our vans
         </Link>
       </section>

@@ -38,7 +38,7 @@ export default function VanDetail() {
           className={styles.image}
         />
 
-        <i className={`${styles.badge} ${styles[type]}`}>{type}</i>
+        <i className={`${styles.badge} badge-${type}`}>{type}</i>
 
         <h1 className={styles.title}>{name}</h1>
 
@@ -48,7 +48,7 @@ export default function VanDetail() {
 
         <p className={styles.description}>{description}</p>
 
-        <button className={styles.rentButton}>Rent this van</button>
+        <button className={`btn-primary ${styles.rentButton}`}>Rent this van</button>
       </div>
     </main>
   );

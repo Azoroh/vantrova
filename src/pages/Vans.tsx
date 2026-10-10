@@ -93,7 +93,7 @@ export default function Vans() {
     : vans;
 
   return (
-    <main className={styles.page}>
+    <main className="page-shell">
       <h1 className={styles.title}>Explore our van options</h1>
 
       <div className={styles.filters}>
@@ -137,7 +137,7 @@ export default function Vans() {
             <div className={styles.vanDetail}>
               <div className={styles.vanInfo}>
                 <h2 className={styles.vanName}>{van.name}</h2>
-                <i className={`${styles.vanBadge} ${styles[van.type]}`}>
+                <i className={`${styles.vanBadge} badge-${van.type}`}>
                   {van.type}
                 </i>
               </div>

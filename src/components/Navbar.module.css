@@ -2,39 +2,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*padding: 45px 26px;*/
-  padding: 0 26px;
-  height: 111px;
-  background-color: #fff7ed;
+  padding: 0 var(--page-gutter);
+  /* clamp: 72px on very small screens → 88px on desktop */
+  height: clamp(4.5rem, 10dvh, 5.5rem);
+  background-color: var(--color-cream);
+  flex-shrink: 0;
 }
 
 .logo {
   display: block;
   line-height: 0;
 }
+
 .logo svg {
-  width: 68px;
+  width: clamp(52px, 8vw, 68px);
   height: auto;
 }
 
 .links {
   display: flex;
-  gap: 15px;
+  gap: var(--sp-2);
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .link {
-  font-size: 16px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   font-weight: 600;
-  line-height: 22.92px;
-  color: #4d4d4d;
+  color: var(--color-charcoal);
   text-decoration: none;
 }
 
 .active {
-  color: #161616;
+  color: var(--color-dark);
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }

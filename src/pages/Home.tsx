@@ -19,7 +19,7 @@ export default function Home() {
           perfect van to make your perfect road trip.
         </p>
 
-        <Link to="/vans" className={styles.button}>
+        <Link to="/vans" className={`btn-primary ${styles.button}`}>
           Find your van
         </Link>
       </div>
