@@ -41,7 +41,6 @@
   font-family: inherit;
   font-size: clamp(0.8125rem, 2vw, 0.875rem);
   cursor: pointer;
-  padding: var(--sp-1);
   margin-left: auto;
 }
 
