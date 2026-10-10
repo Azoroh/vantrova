@@ -1,10 +1,11 @@
 .page {
-  padding: clamp(0.75rem, 2dvh, var(--sp-3)) var(--page-gutter);
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-cream);
   min-height: 0;
+  overflow-y: auto;
+  background-color: var(--color-cream);
+  padding: var(--sp-3) var(--page-gutter) var(--sp-5);
 }
 
 .backButton {
@@ -23,28 +24,17 @@
 .detailContainer {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-height: 0;
 }
 
 .image {
   width: 100%;
   border-radius: var(--radius-md);
-  margin-bottom: clamp(0.75rem, 2.5dvh, 1.25rem);
+  margin-bottom: var(--sp-3);
   object-fit: cover;
-  flex: 1 1 auto;
-  /* clamp shrinks from 30dvh minimum down to 180px on very small screens */
-  min-height: clamp(180px, 25dvh, 240px);
-  max-height: 45dvh;
-}
-
-/* Keep text/button elements from being crushed by the image's flex-grow */
-.badge,
-.title,
-.price,
-.description,
-.rentButton {
-  flex-shrink: 0;
+  display: block;
+  /* aspect-ratio drives height naturally; max-height prevents landscape blowout */
+  aspect-ratio: 4 / 3;
+  max-height: 50vw;
 }
 
 .badge {
@@ -84,7 +74,7 @@
   line-height: 1.5;
   font-weight: 500;
   color: var(--color-dark);
-  margin: 0 0 clamp(0.75rem, 2.5dvh, 1.5rem) 0;
+  margin: 0 0 var(--sp-3) 0;
 }
 
 /* Local override on top of global .btn-primary */
