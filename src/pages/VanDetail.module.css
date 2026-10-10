@@ -3,9 +3,10 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
-  overflow-y: auto;
+  overflow: hidden;
   background-color: var(--color-cream);
-  padding: var(--sp-3) var(--page-gutter) var(--sp-5);
+  /* Padding compresses on short viewports so content always fits */
+  padding: clamp(0.75rem, 2dvh, var(--sp-3)) var(--page-gutter);
 }
 
 .backButton {
@@ -16,70 +17,77 @@
   text-decoration: underline;
   font-size: clamp(0.8125rem, 2vw, 0.875rem);
   font-weight: 400;
-  margin-bottom: clamp(0.75rem, 2dvh, 1.75rem);
+  margin-bottom: clamp(0.5rem, 1.5dvh, var(--sp-2));
   align-self: flex-start;
   flex-shrink: 0;
 }
 
 .detailContainer {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
 .image {
+  /* Spring element: absorbs surplus space, shrinks when viewport is small */
+  flex: 1 1 auto;
+  min-height: clamp(100px, 18dvh, 260px);
   width: 100%;
   border-radius: var(--radius-md);
-  margin-bottom: var(--sp-3);
+  margin-bottom: clamp(0.5rem, 1.5dvh, var(--sp-2));
   object-fit: cover;
   display: block;
-  /* aspect-ratio drives height naturally; max-height prevents landscape blowout */
-  aspect-ratio: 4 / 3;
-  max-height: 50vw;
 }
 
 .badge {
   display: inline-block;
   padding: 4px 10px;
   border-radius: var(--radius-sm);
-  font-size: clamp(0.6875rem, 2vw, 0.75rem);
+  font-size: clamp(0.6875rem, 1.5vw, 0.75rem);
   font-weight: 500;
   font-style: normal;
   color: var(--color-badge-txt);
   align-self: flex-start;
   text-transform: capitalize;
-  margin-bottom: var(--sp-2);
+  margin-bottom: clamp(0.25rem, 1dvh, var(--sp-1));
+  flex-shrink: 0;
 }
 
 .title {
-  font-size: clamp(1.5rem, 4dvh, 1.875rem);
+  font-size: clamp(1.25rem, 4dvh, 1.875rem);
   font-weight: 700;
   color: var(--color-dark);
-  margin: 0 0 var(--sp-1) 0;
+  margin: 0 0 clamp(0.125rem, 0.75dvh, var(--sp-1)) 0;
+  flex-shrink: 0;
 }
 
 .price {
-  font-size: clamp(0.875rem, 2.5dvh, 1rem);
+  font-size: clamp(0.875rem, 2dvh, 1rem);
   font-weight: 400;
   color: var(--color-dark);
-  margin: 0 0 var(--sp-1) 0;
+  margin: 0 0 clamp(0.5rem, 1.5dvh, var(--sp-2)) 0;
+  flex-shrink: 0;
 }
 
 .priceAmount {
-  font-size: clamp(1rem, 3dvh, 1.25rem);
+  font-size: clamp(1rem, 2.5dvh, 1.25rem);
   font-weight: 700;
 }
 
 .description {
-  font-size: clamp(0.8125rem, 2dvh, 0.875rem);
+  font-size: clamp(0.75rem, 1.8dvh, 0.875rem);
   line-height: 1.5;
   font-weight: 500;
   color: var(--color-dark);
-  margin: 0 0 var(--sp-3) 0;
+  margin: 0 0 clamp(0.5rem, 2dvh, var(--sp-3)) 0;
+  flex-shrink: 0;
 }
 
 /* Local override on top of global .btn-primary */
 .rentButton {
   width: 100%;
+  flex-shrink: 0;
 }
 
 .loading {
